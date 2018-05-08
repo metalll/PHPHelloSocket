@@ -159,7 +159,9 @@ class MyChatWsServer implements HttpServerInterface {
     public function onControlFrame(FrameInterface $frame, WsConnection $conn) {
         switch ($frame->getOpCode()) {
             case Frame::OP_CLOSE:
-                $conn->__set("isCorrectClose", true);
+                if (!$conn->__isset("isCorrectClose")){
+                    $conn->__set("isCorrectClose", true);
+                }
                 $conn->close($frame);
                 break;
             case Frame::OP_PING:
