@@ -1,0 +1,74 @@
+{
+    "name": "cboden/Ratchet-examples"
+  , "type": "library"
+  , "homepage": "http://socketo.me"
+  , "keywords": ["WebSocket", "demo", "Ratchet"]
+  , "license": "MIT"
+  , "authors": [
+        {
+            "name": "Chris Boden"
+          , "email": "cboden@gmail.com"
+          , "role": "Developer"
+        }
+    ]
+ , "autoload": {
+        "psr-4": {
+            "Ratchet\\": "src"
+          , "Ratchet\\Tests\\": "tests"
+
+        }
+    }
+  , "require": {
+        "php": ">=5.4.2"
+      , "cboden/Ratchet": "dev-master"
+      , "psr/log": "~1.0"
+      , "monolog/monolog": "~1.0"
+      , "cujojs/when": "2.7.*"
+      , "tavendo/AutobahnJS": "0.8.*"
+      , "gimite/web-socket-js": "dev-master"
+    }
+  , "suggest": {
+        "ext-zmq": "*"
+    }
+  , "repositories": [
+        {
+            "type": "package"
+          , "package": {
+                "name": "gimite/web-socket-js"
+              , "type": "library"
+              , "version": "dev-master"
+              , "source": {
+                    "url": "https://github.com/gimite/web-socket-js"
+                  , "type": "git"
+                  , "reference": "master"
+                }
+            }
+        }
+      , {
+            "type": "package"
+          , "package": {
+                "name": "tavendo/AutobahnJS"
+              , "type": "library"
+              , "version": "0.8.2"
+              , "source": {
+                    "url": "https://github.com/tavendo/AutobahnJS.git"
+                  , "type": "git"
+                  , "reference": "v0.8.2"
+                }
+            }
+        }
+      , {
+            "type": "package"
+          , "package": {
+                "name": "cujojs/when"
+              , "type": "library"
+              , "version": "2.7.1"
+              , "source": {
+                    "url": "https://github.com/cujojs/when.git"
+                  , "type": "git"
+                  , "reference": "2.7.1"
+                }
+            }
+        }
+    ]
+}
